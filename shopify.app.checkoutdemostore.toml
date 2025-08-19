@@ -1,0 +1,24 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "42117bf04f61fbcd1e941bccc83c62e0"
+name = "checkoutdemostore"
+handle = "checkoutdemostore"
+application_url = "https://wrapped-nb-face-standards.trycloudflare.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-07"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_checkouts,read_companies,read_customers,read_discounts,read_orders,write_cart_transforms,write_checkouts,write_companies,write_customers,write_discounts,write_orders"
+
+[auth]
+redirect_urls = ["https://wrapped-nb-face-standards.trycloudflare.com/auth/callback", "https://wrapped-nb-face-standards.trycloudflare.com/auth/shopify/callback", "https://wrapped-nb-face-standards.trycloudflare.com/api/auth/callback"]
+
+[pos]
+embedded = false
